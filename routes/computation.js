@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
-var product = 1;
-var factor = 1;
+let x = Math.random()*100;
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  factor++;
-  product*=factor;
-  res.send(`product is:${product}`);
+  let y= Math.sqrt(x);
+
+  res.send(`sqrt of ${x} is ${y}`);
 });
 
 module.exports = router;
